@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StrayCare - Welcome</title>
+  <link rel="stylesheet" href="credintals.css">
+
+  <style>
+    /* Ensure the body takes the full height and removes margins */
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* Full page background image */
+    body {
+      font-family: cursive;
+      background-image: url('dog.png'); /* Add the path to your dog image */
+      background-size: cover; /* Makes the background image cover the entire page */
+      background-position: center center; /* Centers the background image */
+      background-attachment: fixed; /* Keeps the background fixed when scrolling */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Landing Page Container */
+    .landing-container {
+      background: rgba(255, 255, 255, 0.8); /* Slight transparency for readability */
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .landing-container h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    .landing-container p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .action-buttons a {
+      padding: 15px 30px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+      width: 45%;
+      font-weight: 500;
+    }
+
+    .action-buttons a:hover {
+      transform: translateY(-5px);
+      background-color: #0056b3;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .action-buttons a:active {
+      transform: translateY(2px);
+      box-shadow: none;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <!-- Landing Page -->
+  <div class="landing-container">
+    <div class="welcome-section">
+      <h1>Welcome to StrayCare</h1>
+      <p>Your one-stop solution for helping stray animals.</p>
+      <div class="action-buttons">
+        <a href="login.html" class="action-button">Login</a>
+        <a href="signup.html" class="action-button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

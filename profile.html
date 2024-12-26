@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrayCare - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 20px 40px;
+            text-align: center;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            margin: 40px 20px;
+        }
+
+        .profile-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+            width: 500px;
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ff9f00;
+            margin-bottom: 10px;
+        }
+
+        .profile-card p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+
+        .btn {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            text-align: center;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+
+        /* Edit Profile Form */
+        .edit-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .edit-form input,
+        .edit-form select {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .edit-form button {
+            background-color: #e68900;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            border: none;
+        }
+
+        .edit-form button:hover {
+            background-color: #ff9f00;
+        }
+        
+        /* Navbar */
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 15px 30px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>StrayCare</h1>
+        <p>Rescue. Adopt. Report. Together, we can make a difference for stray animals.</p>
+    </header>
+
+
+       <nav>
+        <a href="index.html">Home</a>
+        <a href="report-animal.html">Report an Animal</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="donate">Donate</a>
+        <a href="aboutus.html">About US</a>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="profile-card" class="profile-card">
+            <img id="profile-pic" src="https://via.placeholder.com/120" alt="Profile Picture">
+            <h3 id="username">Loading...</h3>
+            <p id="real-name">Loading...</p>
+            <p id="age">Age: Loading...</p>
+            <p id="preferred-animal">Preferred Animal: Loading...</p>
+            <a href="#" id="edit-btn" class="btn"></a>
+
+            <!-- Edit Profile Form -->
+            <div class="edit-form" id="edit-form">
+                <input type="text" id="edit-real-name" placeholder="Real Name">
+                <input type="number" id="edit-age" placeholder="Age">
+                <select id="edit-preferred-animal">
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Rabbit">Rabbit</option>
+                </select>
+                <button id="save-btn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js">
+    </script>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 StrayCare | All Rights Reserved</p>
+        </footer>
+
+</body>
+
+</html>

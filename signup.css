@@ -1,0 +1,114 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: url('dog.png'); /* Add the path to your dog image */
+    font-family:cursive;
+    
+}
+
+/* Container for the form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+/* Form styling */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Heading styling */
+.form-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input group container */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.input-field {
+    flex: 1;
+}
+
+.input-field label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.input-field input, .input-field select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input:focus, .input-field select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.submit-button:active {
+    transform: translateY(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .input-field {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

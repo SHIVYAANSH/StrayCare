@@ -1,0 +1,543 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrayCare - Rescue, Adopt, Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        footer {
+          text-align: center;
+          padding: 20px;
+          background-color: #ff9f00;
+          color: #fff;
+          margin-top: 40px;
+      }
+
+
+        
+
+        .view-attachment {
+          cursor:pointer; 
+          background-color: #ff9f00;
+          color: #fff;
+          padding: 12px 25px;
+          border-radius: 30px;
+          border-color:#ff9f00;
+          text-decoration: none;
+          font-weight: 500;
+          display: inline-block;
+          text-align: center;
+          margin-top: 30px;
+          transition: background-color 0.3s;
+
+      }
+
+      .view-attachment:hover {
+          background-color: #e68900;
+      }
+
+        
+
+        body {
+          background-image: url('https://img.freepik.com/free-vector/colorful-doodle_52683-4622.jpg');
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 20px 40px;
+            text-align: center;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 15px 30px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 25%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.8rem;
+            color: #ff9f00;
+            margin-bottom: 20px;
+        }
+       
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Post Feed */
+        .post-feed {
+            width: 70%;
+        }
+
+        .post {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .post-header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .post-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .post-content p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Like and Comment Buttons */
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-footer button {
+            background-color: #ff9f00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .post-footer button:hover {
+            background-color: #e68900;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ff9f00;
+            margin-bottom: 10px;
+        }
+
+        .profile-card p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            text-align: center;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .post-feed {
+                width: 100%;
+            }
+
+            .post-footer button {
+                width: 100%;
+            }
+        }
+
+        /* Form Styling */
+.report-form {
+  background-color: #fff;
+  padding: 30px;
+  margin: 30px 10;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+        /* Form Styling */
+        .image {
+          margin-top:60px;
+        width:600px;
+        height: 600px;
+        border-color:#ff9f00; 
+        border-radius: 100px;
+       
+        }
+
+.report-form label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.report-form input[type="text"],
+.report-form input[type="file"],
+.report-form textarea,
+.report-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.report-form input[type="file"] {
+  padding: 8px;
+}
+
+.report-form textarea {
+  resize: vertical;
+}
+
+.report-form button {
+  background-color: #ff9f00;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.report-form button:hover {
+  background-color: #e68900;
+}
+
+/* Loading Spinner Styles */
+#loading {
+  display: none;
+  text-align: center;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #ff9f00;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design for the Form */
+@media (max-width: 768px) {
+  .report-form {
+      padding: 20px;
+  }
+
+  .report-form input,
+  .report-form textarea,
+  .report-form select {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+
+  .report-form button {
+      width: 100%;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>StrayCare</h1>
+        <p>Rescue. Adopt. Report. Together, we can make a difference for stray animals.</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="report-animal.html">Report an Animal</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="donate.html">Donate</a>
+        <a href="aboutus.html">About US</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <img class="image" src="https://img.freepik.com/premium-photo/cat-dog-sitting-together_191971-16716.jpg">
+      <section class="report-animal">
+        
+
+        <!-- Post Submission Form -->
+        <form class="report-form" id="reportForm">
+          <!-- Report Title -->
+          <label for="reportTitle">Report Title</label>
+          <input type="text" id="reportTitle" placeholder="Enter report title..." required>
+
+          <!-- Animal Description -->
+          <label for="reportContent">Animal Description</label>
+          <textarea id="reportContent" placeholder="Describe the animal and its condition..." rows="5" required></textarea>
+
+          <!-- Animal Condition -->
+          <label for="animalCondition">Animal Condition</label>
+          <select id="animalCondition" required>
+            <option value="" disabled selected>Select condition</option>
+            <option value="injured">Injured</option>
+            <option value="sick">Sick</option>
+            <option value="lost">Lost</option>
+            <option value="abandoned">Abandoned</option>
+          </select>
+
+          <!-- Animal Location -->
+          <label for="animalLocation">Animal Location</label>
+          <input type="text" id="animalLocation" placeholder="Enter location (e.g., city, street)..." required>
+
+          <!-- Upload Image -->
+          <label for="reportImage">Upload Image</label>
+          <input type="file" id="reportImage" accept="image/*">
+
+          <!-- Submit Button -->
+          <button type="button" onclick="submitReport()">Submit Report</button>
+        </form>
+
+        <!-- Loading Spinner Container -->
+        <div id="loading">
+          <p>Submitting your report...</p>
+          <div class="spinner"></div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+  
+  <footer>
+    <p>&copy; 2024 StrayCare | All Rights Reserved</p>
+  </footer>
+
+  <!-- Separate scripts -->
+  <script src="report.js"></script>
+
+  <script>
+    // When the page loads, ensure the spinner is hidden
+document.getElementById("loading").style.display = "none";
+
+    // Function to check and prompt for username
+    document.addEventListener('DOMContentLoaded', () => {
+      const usernameModal = document.getElementById("usernameModal");
+
+      // Check if username exists in localStorage
+      const savedUsername = localStorage.getItem("username");
+
+      if (savedUsername) {
+        // Hide modal if username already exists
+        usernameModal.style.display = "none";
+      } else {
+        // Show modal to get username
+        usernameModal.style.display = "flex";
+      }
+    });
+
+    // Function to save username
+    function saveUsername() {
+      const usernameInput = document.getElementById("usernameInput").value.trim();
+      const usernameModal = document.getElementById("usernameModal");
+
+      if (usernameInput) {
+        localStorage.setItem("username", usernameInput);
+
+        // Hide modal after saving username
+        usernameModal.style.display = "none";
+      } else {
+        alert("Please enter a valid name.");
+      }
+    }
+
+    // Function to submit report
+    function submitReport() {
+      // Get form data
+      const username = localStorage.getItem("username");
+      const reportContent = document.getElementById("reportContent").value;
+      const reportTitle = document.getElementById("reportTitle").value;
+      const animalCondition = document.getElementById("animalCondition").value;
+      const animalLocation = document.getElementById("animalLocation").value;
+      const reportImage = document.getElementById("reportImage").files[0];
+      const currentTime = new Date().toLocaleString();
+
+      console.log("Report Time:", currentTime); // Log the time to make sure it's captured
+
+      if (!reportContent || !reportImage || !reportTitle || !animalCondition || !animalLocation) {
+        alert("Please fill in all fields and attach an image.");
+        return;
+      }
+
+      // Show loading spinner
+      document.getElementById("loading").style.display = "block";
+
+      // Prepare form data for submission
+      const formData = new FormData();
+      formData.append("username", username);
+      formData.append("report_content", reportContent);
+      formData.append("report_title", reportTitle);
+      formData.append("animal_condition", animalCondition);
+      formData.append("report_location", animalLocation);
+      formData.append("report_image", reportImage);
+      formData.append("report_time", currentTime);
+
+      // Google Apps Script Web App URL (replace with your actual URL)
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxTMbsjAIXJDX_Uuqm-7sPw-8XQUgwWK1sZvwvzwZwjUaomvE-CyE67ScBSEof6Udtc/exec';
+
+      // Send the data to Google Sheets using fetch API
+      fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        // If the report was successfully submitted
+        alert("Report submitted successfully!");
+
+        // Hide the loading spinner
+        document.getElementById("loading").style.display = "none";
+
+        // Clear the form fields after successful submission
+        document.getElementById("reportContent").value = "";
+        document.getElementById("reportTitle").value = "";
+        document.getElementById("animalCondition").value = "";
+        document.getElementById("animalLocation").value = "";
+        document.getElementById("reportImage").value = "";
+      })
+      .catch(error => {
+        console.error("Error submitting report:", error);
+        alert("Error submitting report. Please try again.");
+
+        // Hide the loading spinner on error
+        document.getElementById("loading").style.display = "none";
+      });
+    }
+  </script>
+</body>
+</html>

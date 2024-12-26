@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrayCare - Donate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 15px 30px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        /* Donation Section */
+        .donation-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 40px 20px;
+        }
+
+        .donation-card {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            text-align: center;
+        }
+
+        .donation-card h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ff9f00;
+        }
+
+        .donation-card p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .donation-card .qr-code img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .donation-card .payment-instructions {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* More Content Sections */
+        .how-donations-help {
+            background-color: #fff;
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .how-donations-help h3 {
+            font-size: 1.8rem;
+            color: #ff9f00;
+            margin-bottom: 20px;
+        }
+
+        .how-donations-help p {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .testimonial h3 {
+            font-size: 1.8rem;
+            color: #ff9f00;
+            margin-bottom: 20px;
+        }
+
+        .testimonial p {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff9f00;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .donation-card {
+                width: 90%;
+            }
+
+            .how-donations-help, .testimonial {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>StrayCare</h1>
+        <p>Help us support abandoned animals through your donation.</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="report-animal.html">Report an Animal</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="donate.html">Donate</a>
+        <a href="aboutus.html">About Us</a>
+    </nav>
+
+    <!-- Donation Section -->
+    <div class="donation-section">
+        <div class="donation-card">
+            <h2>Make a Donation</h2>
+            <p>Your contribution can help save a life. Scan the QR code below to donate and support our cause.</p>
+
+            <!-- QR Code for Payment -->
+            <div class="qr-code">
+                <img src="qr.png" alt="QR Code for Payment">
+            </div>
+
+            <div class="payment-instructions">
+                <p>Scan the QR code above with your UPI or banking app to make a donation.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How Donations Help Section -->
+    <div class="how-donations-help">
+        <h3>How Your Donation Helps</h3>
+        <p>Your generous donation goes directly towards improving the lives of abandoned animals. We use your support to provide food, shelter, medical care, and the chance for a better life. Every contribution counts, no matter the size!</p>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="testimonial">
+        <h3>What Our Donors Are Saying</h3>
+        <p>"I feel so good knowing that my donation is helping animals in need. StrayCare is doing an amazing job!" – Deepak, Delhi</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 StrayCare | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

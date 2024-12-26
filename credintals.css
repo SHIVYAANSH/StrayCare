@@ -1,0 +1,289 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  
+  
+
+  
+
+  /* Landing Page */
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #64b3f4 0%, #c2e9fb 100%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .landing-container h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  .landing-container p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+  
+  .landing-container .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .landing-container .action-buttons a {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    width: 45%;
+    font-weight: 500;
+  }
+  
+  .landing-container .action-buttons a:hover {
+    transform: translateY(-5px);
+    background-color: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .landing-container .action-buttons a:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Login & Sign-Up Forms */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('https://via.placeholder.com/1200x800') no-repeat center center fixed;
+    background-size: cover;
+    padding: 0 20px;
+  }
+  
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: slideUp 0.5s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 0.7s ease-out forwards;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  form input {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    color: #333;
+  }
+  
+  form input:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  form button.submit-button {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  form button.submit-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  form button.submit-button:active {
+    transform: translateY(2px);
+  }
+  
+  form p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  form p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  form p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .landing-container {
+      max-width: 90%;
+      padding: 30px;
+    }
+  
+    .landing-container h1 {
+      font-size: 2.5rem;
+    }
+  
+    .landing-container p {
+      font-size: 1rem;
+    }
+  
+    .landing-container .action-buttons a {
+      font-size: 1.1rem;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .form-container {
+      width: 100%;
+      max-width: 90%;
+      padding: 30px;
+    }
+  
+    form input, form button.submit-button {
+      font-size: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fixing Color Contrast */
+  button.submit-button {
+    color: #fff;
+  }
+  
+  form input {
+    color: #333;
+  }
+  
+  /* Improving Text Contrast for Forms */
+  input:focus, button:focus, a:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  button.submit-button:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Placeholder style for inputs */
+  input::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  /* Subtle shadows and smooth transitions */
+  input, button.submit-button {
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    background-color: #fff;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  button.submit-button:focus {
+    background-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+  }
+  
+  /* Login / Signup Buttons */
+  .action-buttons a {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .action-buttons a:hover {
+    transform: translateY(-5px);
+    background-color: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  

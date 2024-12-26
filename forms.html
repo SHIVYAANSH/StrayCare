@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="adopt.css" rel="stylesheet">
+  <style>
+    
+        /* General Reset */
+        
+            /* General Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+
+                        /* Select Dropdown Styling */
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Select Focus Effect */
+select:focus {
+    border-color: #ff9f00;
+    box-shadow: 0 0 8px rgba(255, 159, 0, 0.4);
+}
+
+/* Styling Option Text */
+option {
+    padding: 12px;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
+/* Button Styling */
+button {
+    background-color: #ff9f00;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #e68900;
+}
+
+
+
+/* Body Styling */
+h1{
+    
+ 
+}
+
+/* Header */
+
+
+/* Form Styling */
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ff9f00;
+        background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+        backdrop-filter: blur(1px); /* Optional: Adds a frosted glass effect */
+    }
+    
+
+/* Label Styling */
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Input Fields Styling */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #ff9f00;
+    box-shadow: 0 0 5px rgba(255, 159, 0, 0.5);
+}
+
+/* Button Styling */
+button {
+    background-color: #ff9f00;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #e68900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+            
+
+            footer {
+                text-align: center;
+                padding: 20px;
+                background-color: #ff9f00;
+                color: #fff;
+                margin-top: 40px;
+            }
+
+            body {
+                background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210327/pngtree-cute-dog-tiling-background-silhouette-small-animal-image_595773.jpg');
+                font-family: 'Poppins', sans-serif;
+                background-color: #f7f7f7;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            /* Header */
+            header {
+                background-color: #ff9f00;
+                color: #fff;
+                padding: 20px 40px;
+                text-align: center;
+                border-bottom: 2px solid #f0f0f0;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+            header p {
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+
+            /* Navbar */
+            nav {
+                
+                background-color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px ;
+                border-bottom: 1px solid #ddd;
+            }
+
+            nav a {
+                color: #333;
+                text-decoration: none;
+                font-weight: 600;
+                padding: 15px 30px;
+                transition: background-color 0.3s;
+            }
+
+            nav a:hover {
+                background-color: #f0f0f0;
+                border-radius: 5px;
+            }
+
+            /* Adoption Form */
+            .adoption-form {
+                width: 60%;
+                margin: 40px auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+
+            .adoption-form h2 {
+                text-align: center;
+                color: #ff9f00;
+                margin-bottom: 20px;
+            }
+
+            .adoption-form label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+
+            .adoption-form input,
+            .adoption-form textarea,
+            .adoption-form select {
+                width: 100%;
+                padding: 12px;
+                font-size: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+                outline: none;
+            }
+
+            .adoption-form button {
+                background-color: #ff9f00;
+                color: #fff;
+                border: none;
+                padding: 12px 25px;
+                font-size: 1.1rem;
+                font-weight: 500;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 100%;
+            }
+
+            .adoption-form button:hover {
+                background-color: #e68900;
+            }
+
+            /* Animal Data Display */
+            .animal-details {
+                background-color: #f7f7f7;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .animal-details h3 {
+                color: #ff9f00;
+                margin-bottom: 15px;
+            }
+
+            .animal-details p {
+                font-size: 1.1rem;
+                color: #555;
+            }
+
+            
+  </style>
+</head>
+<body>
+
+        <!-- Header -->
+         
+        <header>
+            <h1>StrayCare</h1>
+            <p>Rescue. Adopt. Report. Together, we can make a difference for stray animals.</p>
+        </header>
+
+        <!-- Navbar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="report-animal.html">Report an Animal</a>
+            <a href="adopt.html">Adopt</a>
+            <a href="donate">Donate</a>
+            <a href="contact">About Us</a>
+        </nav>
+
+
+  <br>
+  <br>
+  
+  <form id="adoptForm">
+    <h1> Animal Adoption Form</h1>
+    <label for="full-name">Your Full Name</label>
+    <input type="text" id="full-name" required><br><br>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="contact-number">Why do you want to adopt this animal?</label>
+    <input type="text" id="contact-number" required><br><br>
+
+    <label for="adopt-reason">Reason for Adoption:</label>
+    <input type="text" id="adopt-reason" required><br><br>
+
+    <label for="Describe your living arrangements">Living Arrangements:</label>
+    <input type="text" id="living-arrangements" required><br><br>
+
+    
+
+    <label for="previous-pet-experience">Do you have previous experience with pets?</label>
+    <select id="previous-pet-experience" name="previous-pet-experience" required>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+
+    <label for="previous-pet-experience">Animal Category</label>
+
+    <select id="animal-code" name="animal-code" required>
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+    </select>
+  
+   
+
+    <button type="button" onclick="submitReport()">Submit</button>
+  </form>
+
+  <script>
+    function submitReport() {
+      // Get form data
+      const full_name = document.getElementById("full-name").value;
+      const email = document.getElementById("email").value;
+      const contact = document.getElementById("contact-number").value;
+      const adopt_reason = document.getElementById("adopt-reason").value;
+      const living_arrangements = document.getElementById("living-arrangements").value;
+      const previous_pet_experience = document.getElementById("previous-pet-experience").value;
+      const animal_code = document.getElementById("animal-code").value;
+
+      // Check if the form has all required fields filled
+      if (!full_name || !email || !contact || !adopt_reason || !living_arrangements || !previous_pet_experience || !animal_code) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Prepare form data for submission
+      const formData = new FormData();
+      formData.append("full_name", full_name);
+      formData.append("email", email);
+      formData.append("contact_number", contact);
+      formData.append("adopt_reason", adopt_reason);
+      formData.append("living_arrangements", living_arrangements);
+      formData.append("previous_pet_experience", previous_pet_experience);
+      formData.append("animal_code", animal_code);
+
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz8YuBwJOXwBn0dUKVtSdqk7Zo4KRAklix6xsLpMHTOvYM5y9ZFxadwK2QYsMzLgeDb/exec';
+
+      // Send the data to Google Sheets using fetch API
+      fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert("Report submitted successfully!");
+        // Clear the form fields after successful submission
+        document.getElementById("adoptForm").reset();
+      })
+      .catch(error => {
+        console.error("Error submitting report:", error);
+        alert("Error submitting report. Please try again.");
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrayCare - Rescue, Adopt, Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff9f00;
+            color: #fff;
+            margin-top: 40px;
+        }
+
+        .view-attachment {
+          cursor:pointer; 
+          background-color: #ff9f00;
+          color: #fff;
+          padding: 12px 25px;
+          border-radius: 30px;
+          border-color:#ff9f00;
+          text-decoration: none;
+          font-weight: 500;
+          display: inline-block;
+          text-align: center;
+          margin-top: 30px;
+          transition: background-color 0.3s;
+
+      }
+
+      .view-attachment:hover {
+          background-color: #e68900;
+      }
+
+        
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 20px 40px;
+            text-align: center;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 15px 30px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 25%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.8rem;
+            color: #ff9f00;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Post Feed */
+        .post-feed {
+            width: 70%;
+        }
+
+        .post {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .post-header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .post-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .post-content p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Like and Comment Buttons */
+        .post-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-footer button {
+            background-color: #ff9f00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .post-footer button:hover {
+            background-color: #e68900;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-card img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ff9f00;
+            margin-bottom: 10px;
+        }
+
+        .profile-card p {
+            font-size: 1.1rem;
+            color: #777;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            text-align: center;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            .post-feed {
+                width: 100%;
+            }
+
+            .post-footer button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>StrayCare</h1>
+        <p>Rescue. Adopt. Report. Together, we can make a difference for stray animals.</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="report-animal.html">Report an Animal</a>
+        <a href="adopt.html">Adopt</a>
+        <a href="donate.html">Donate</a>
+        <a href="aboutus.html">About US</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-card">
+                <img id="profilePicture" src="https://via.placeholder.com/150" alt="Profile Picture">
+
+               <h3 id="profileUsername">John Doe</h3>
+                <p>Animal Lover </p>
+            
+                <a href="#donate" class="btn">Donate Now</a>
+            </div>
+            
+        </div>
+
+        <!-- Post Feed -->
+        <div class="post-feed">
+
+        <div class="container">
+          <h1>Reports of Stray Animals</h1>
+          <div id="postsContainer"></div>
+        </div>
+        </div>
+
+            <!-- Post 2 -->
+           
+    </div>
+    <script src="report.js">
+    </script>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 StrayCare | All Rights Reserved</p>
+        </footer>
+
+</body>
+
+</html>
